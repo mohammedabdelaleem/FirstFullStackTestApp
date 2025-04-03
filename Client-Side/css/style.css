@@ -1,0 +1,113 @@
+html {box-sizing: border-box;} 
+ 
+*, *:before, *:after {box-sizing: inherit;}  
+
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+button {
+  display: inline-block;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #b52a37;
+}
+
+form {
+  margin-top: 20px;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+input, button {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+.flex{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center ;
+  gap: 8%;
+}
+
+.mycard {
+  width: 30%;
+}
+
+img {
+  border-radius: 5px;
+}
+.card-title {
+  font-size: 20px;
+  font-weight: bolder;
+}
