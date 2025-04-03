@@ -21,4 +21,4 @@ This is a simple **ASP.NET Core Web API** for managing student records. It provi
 ## 📌 How to Run
 1. Clone the repository  
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/mohammedabdelaleem/FirstFullStackTestApp)
