@@ -2,6 +2,10 @@ html {box-sizing: border-box;}
  
 *, *:before, *:after {box-sizing: inherit;}  
 
+*{
+  padding: 0;
+  margin: 0;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -102,11 +106,13 @@ a{
 
 .mycard {
   width: 30%;
+  margin-top: 30px;
 }
 
 img {
   border-radius: 5px;
 }
+
 .card-title {
   font-size: 20px;
   font-weight: bolder;

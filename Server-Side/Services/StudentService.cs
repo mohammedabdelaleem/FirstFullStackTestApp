@@ -15,5 +15,10 @@ namespace firstRest.Services
 		{
 			return context.Students.ToList();
 		}
+
+		public Student? GetStudentById(Guid id)
+		{
+			return context.Students.SingleOrDefault(x => x.Id == id);
+		}
 	}
 }

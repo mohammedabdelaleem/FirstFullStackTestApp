@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\students.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|solutionrelative:students.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|d:\\university\\coding\\web-development\\.net-community\\full-stack\\firstapp\\server-side\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|solutionrelative:controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|d:\\university\\coding\\web-development\\.net-community\\full-stack\\firstapp\\server-side\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6B3FA81-ACD1-4BB2-8631-F8421E420FFB}|firstRest.csproj|D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,50 +30,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
+              "DocumentIndex": 0,
+              "Title": "students.json",
+              "DocumentMoniker": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\students.json",
+              "RelativeDocumentMoniker": "students.json",
+              "ToolTip": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\students.json",
+              "RelativeToolTip": "students.json",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAAAIkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-02T23:56:10.151Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T23:51:17.465Z",
+              "WhenOpened": "2025-04-03T19:19:24.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "StudentService.cs",
               "DocumentMoniker": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\Services\\StudentService.cs",
               "RelativeDocumentMoniker": "Services\\StudentService.cs",
               "ToolTip": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\Services\\StudentService.cs",
               "RelativeToolTip": "Services\\StudentService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T23:44:07.417Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "StudentsController.cs",
               "DocumentMoniker": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\Controllers\\StudentsController.cs",
               "RelativeDocumentMoniker": "Controllers\\StudentsController.cs",
               "ToolTip": "D:\\University\\Coding\\Web-Development\\.Net-Community\\Full-Stack\\FirstApp\\Server-Side\\Controllers\\StudentsController.cs",
               "RelativeToolTip": "Controllers\\StudentsController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAADAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAwHQAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T23:41:57.113Z",
               "EditorCaption": ""

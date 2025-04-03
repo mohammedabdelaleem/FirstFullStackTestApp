@@ -1,0 +1,50 @@
+.container {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+input {
+  padding: 8px;
+  width: 60%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#studentDetails {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.studentCardTitle{
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.std-info {
+  font-size: 18px;
+  font-weight: bold;
+}
+#getStudentBtn{
+  border-radius: 8px;
+  font-size: 20px;
+
+}
