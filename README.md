@@ -4,7 +4,9 @@ This is a simple **ASP.NET Core Web API** for managing student records. It provi
 - **Get all students**  
 - **Get all passed students (Grade ≥ 50)**  
 - **Get all failed students (Grade < 50)**  
-- **Find a student by ID**  
+- **Find a student by ID**
+- **Add New student**
+-  **Delete student by ID** 
 
 ## 🚀 Endpoints
 
