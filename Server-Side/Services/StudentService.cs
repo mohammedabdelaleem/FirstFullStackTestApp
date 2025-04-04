@@ -27,5 +27,11 @@ namespace firstRest.Services
 			context.SaveChanges();
 			return student.Id;
 		}
+
+		public void Delete(Student student)
+		{
+			context.Students.Remove(student);
+			context.SaveChanges();
+		}
 	}
 }

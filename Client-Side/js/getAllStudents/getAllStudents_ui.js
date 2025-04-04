@@ -14,7 +14,7 @@ function renderStudents(students) {
           <td>${student.grade}</td>
           <td>
               <button onclick="handleEdit(${student.id})">Edit</button>
-              <button class="delete" onclick="handleDelete(${student.id})">Delete</button>
+              <td><button class="btn btn-danger" onclick="deleteStudent('${student.id}')">Delete</button></td>
           </td>
       `;
 

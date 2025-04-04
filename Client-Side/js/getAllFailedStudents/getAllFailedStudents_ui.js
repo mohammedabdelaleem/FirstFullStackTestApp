@@ -13,9 +13,8 @@ function renderStudents(students) {
           <td>${student.age}</td>
           <td>${student.grade}</td>
           <td>
-              <button onclick="handleDelete(${student.id})">Edit</button>
-              <button class="delete" onclick="handleDelete(${student.id})">Delete</button>
-          </td>
+              <button >Edit</button>
+              <td><button class="btn btn-danger" onclick="deleteStudent('${student.id}')">Delete</button></td>          </td>
       `;
 
       tableBody.appendChild(row);

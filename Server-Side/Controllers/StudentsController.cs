@@ -143,5 +143,22 @@ namespace firstRest.Controllers
 
 			return CreatedAtAction(nameof(Add), new {id = student.Id},student);
 		}
+
+
+		[HttpDelete("{id:guid}")]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status404NotFound)]
+		public ActionResult Delete(Guid id)
+		{
+			Student student = studentService.GetById(id);	
+			if(student == null)
+			{
+				return NotFound(new { message = $"Student {id.ToString().Substring(0, 4)} Not Found" });
+			}
+
+			studentService.Delete(student);
+
+			return Ok(new { message = $"Student {id.ToString().Substring(0, 4)} Removed Successfuly" });
+		}
 	}
 }
