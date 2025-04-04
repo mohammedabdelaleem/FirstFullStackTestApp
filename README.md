@@ -19,7 +19,7 @@ This is a simple **ASP.NET Core Web API** for managing student records. It provi
 ## 🛠 Technologies Used
 - **Backend:** ASP.NET Core Web API  
 - **Database:** SQL Server / Entity Framework Core  
-- **Tools:** Visual Studio, Postman, Swagger  
+- **Tools:** Visual Studio, Visual Studio Code, Postman, Swagger  
 
 ## 📌 How to Run
 1. Clone the repository  
