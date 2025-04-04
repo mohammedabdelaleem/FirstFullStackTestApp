@@ -11,14 +11,21 @@ namespace firstRest.Services
         {
 			this.context = context;
 		}
-        public List<Student> GetAllStudents()
+        public List<Student> GetAll()
 		{
 			return context.Students.ToList();
 		}
 
-		public Student? GetStudentById(Guid id)
+		public Student? GetById(Guid id)
 		{
 			return context.Students.SingleOrDefault(x => x.Id == id);
+		}
+
+		public Guid Add(Student student)
+		{
+			context.Students.Add(student);
+			context.SaveChanges();
+			return student.Id;
 		}
 	}
 }

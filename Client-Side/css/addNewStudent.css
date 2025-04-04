@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-h-v{
+min-height: 100vh;
+min-width: 100vw;
+
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#studentForm {
+  background-color: #fff;
+display: block;
+  border: 2px solid #49494952;
+  border-radius: 6px;
+  width: 40vw;
+  /* margin: 50px auto; */
+
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+input {
+  width: 100%;
+  font-size: 19px;
+  padding: 10px 0 10px 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+border: 1px solid ;
+}
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04aa6d;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+.remove {
+  display: none;
+}

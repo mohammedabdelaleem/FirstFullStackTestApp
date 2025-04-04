@@ -37,9 +37,9 @@ namespace firstRest.Controllers
 		[HttpGet("all")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public ActionResult<IEnumerable<Student>> GetAllStudents()
+		public ActionResult<IEnumerable<Student>> GetAll()
 		{
-			IEnumerable<Student> students = studentService.GetAllStudents();
+			IEnumerable<Student> students = studentService.GetAll();
 			
 			if(students ==null || !students.Any())
 			{
@@ -54,11 +54,11 @@ namespace firstRest.Controllers
 		[HttpGet("passed")] // you can use Name to generate the url automatically
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public ActionResult<IEnumerable<Student>> GetPassedStudents()
+		public ActionResult<IEnumerable<Student>> GetPasseds()
 		{
 			Predicate<Student> predicate = std => std.Grade >= 50;
 
-			IEnumerable<Student> students = studentService.GetAllStudents()
+			IEnumerable<Student> students = studentService.GetAll()
 				.Where(std=>predicate(std)).ToList();
 
 			if (students == null || !students.Any())
@@ -73,11 +73,11 @@ namespace firstRest.Controllers
 		[HttpGet("failed")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public ActionResult<IEnumerable<Student>> GetFailedStudents()
+		public ActionResult<IEnumerable<Student>> GetFaileds()
 		{
 			Predicate<Student> predicate = std => !(std.Grade >= 50);
 
-			IEnumerable<Student> students = studentService.GetAllStudents()
+			IEnumerable<Student> students = studentService.GetAll()
 				.Where(std => predicate(std)).ToList();
 
 			if (students == null || !students.Any())
@@ -92,10 +92,10 @@ namespace firstRest.Controllers
 		[HttpGet("average")] // you can use Name to generate the url automatically
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public ActionResult<decimal> GetAverageStudentsGrade()
+		public ActionResult<decimal> GetAverageGrades()
 		{
 
-			decimal average = studentService.GetAllStudents().Average(std => std.Grade);
+			decimal average = studentService.GetAll().Average(std => std.Grade);
 			if(average <= 0)
 			{
 				return BadRequest("Average Can't Be 0 or Less");
@@ -108,9 +108,9 @@ namespace firstRest.Controllers
 		[HttpGet("{id:guid}")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public ActionResult<Student> GetStudentById(Guid id) 
+		public ActionResult<Student> GetById(Guid id) 
 		{
-			Student? student = studentService.GetStudentById(id);
+			Student? student = studentService.GetById(id);
 
 			if(student == null)
 			{
@@ -118,6 +118,30 @@ namespace firstRest.Controllers
 			}
 
 			return Ok(student);
+		}
+
+		#region Notes
+		// [FromBody] Attribute → Ensures JSON request body is correctly mapped to Student.
+		//Request Body: Exclude the id(auto-generate) from the request body when creating a resource (let the server generate it).
+
+		#endregion
+		[HttpPost("add")]
+		[ProducesResponseType(StatusCodes.Status201Created)]
+		[ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+		public ActionResult<Student> Add([FromBody]Student student)
+
+		{
+			if (!ModelState.IsValid)
+			{
+				// Return 400 Bad Request with validation errors
+				return BadRequest(ModelState);
+			}
+
+			// save to db
+			student.Id = studentService.Add(student);
+
+			return CreatedAtAction(nameof(Add), new {id = student.Id},student);
 		}
 	}
 }
