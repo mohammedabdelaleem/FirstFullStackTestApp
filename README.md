@@ -12,6 +12,9 @@ This is a simple **ASP.NET Core Web API** for managing student records. It provi
 - `GET /api/students/passed` → Get all students who passed  
 - `GET /api/students/failed` → Get all students who failed  
 - `GET /api/students/{id}` → Find a student by ID  
+- `Post /api/students` → Add New student 
+- `Delete /api/students/{id}` → Delete student by ID  
+
 
 ## 🛠 Technologies Used
 - **Backend:** ASP.NET Core Web API  
