@@ -6,9 +6,19 @@
     <title>Add Student</title>
 
     <link rel="stylesheet" href="../css/addNewStudent.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dialog.css">
+
     <script defer src="../js/addNewStudent.js"></script>
 
+    <style>
+      .center {
+        width: 100%;
+      }
+    </style>
 </head>
+
+
 <body style="background-color: #99a4b5bf;">
   <div class="flex-h-v">
       <form id="studentForm">
@@ -24,16 +34,19 @@
           <input type="number" id="grade" name="grade" required placeholder="Enter Grade"><br><br>
     
           <button class="registerbtn" type="submit">Add Student</button>
+        </div>
       </form>
   </div >
 
   <dialog class="remove" id="addedDialog">
     <div class="dialog-content">
       <p id="addedValue">Loading...</p>
-      <button id="closeDialogBtn">Close</button>
+      <div class="center">
+        <button id="closeDialogBtn">Close</button>
+      </div>    
     </div>
   </dialog>
-    <!-- <dialog id="responseMessage"></dialog> -->
-</div>
+  
+
 </body>
 </html>
