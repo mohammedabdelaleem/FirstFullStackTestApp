@@ -3,6 +3,7 @@ using firstRest.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace firstRest.Controllers
 {
@@ -125,7 +126,7 @@ namespace firstRest.Controllers
 		//Request Body: Exclude the id(auto-generate) from the request body when creating a resource (let the server generate it).
 
 		#endregion
-		[HttpPost("add")]
+		[HttpPost]
 		[ProducesResponseType(StatusCodes.Status201Created)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 
@@ -160,5 +161,42 @@ namespace firstRest.Controllers
 
 			return Ok(new { message = $"Student {id.ToString().Substring(0, 4)} Removed Successfuly" });
 		}
+
+
+		[HttpPut("{id:guid}")]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status404NotFound)]
+		[ProducesResponseType(StatusCodes.Status400BadRequest)]
+		public ActionResult<Student> Update(Guid id, [FromBody] Student student)
+		{
+			if (!ModelState.IsValid)
+			{
+				return BadRequest(ModelState);
+			}
+
+			if (id != student.Id)
+			{
+				return BadRequest(new { message = $"Student ID mismatch your {id} != {student.Id} " });
+			}
+
+			// Check if student exists
+			bool studentExists = studentService.IsExists(id);
+			if (!studentExists)
+			{
+				return NotFound(new { message = "Student not found" });
+			}
+
+			// Update student
+			Student? updatedStudent = studentService.Update(student);
+
+			if (updatedStudent != null)
+			{
+				return Ok(updatedStudent);
+			}
+
+			return BadRequest(new { message = "Failed to update student" });
+		}
+
 	}
+
 }

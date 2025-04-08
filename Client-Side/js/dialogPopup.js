@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5087/api/students/average";
+const API_URL_AVG = "http://localhost:5087/api/students/average";
 
 // Get Elements
 const averageDialog = document.getElementById("averageDialog");
@@ -9,13 +9,13 @@ const goButton = document.querySelector(".btn.average"); // Select the "Go" butt
 // Fetch and Show Dialog with Average Grade
 async function getStudentsAverageGrade() {
   try {
-    const response = await fetch(API_URL);
+    const response = await fetch(API_URL_AVG);
     if (!response.ok) {
       throw new Error("Failed to fetch data");
     }
 
     const data = await response.json();
-    averageDialog.classList.toggle("remove");
+    averageDialog.classList.toggle("hide");
     averageValue.textContent = `Average Grade: ${data.average.toFixed(2)}`;
     averageDialog.showModal();
   } catch (error) {
@@ -25,12 +25,12 @@ async function getStudentsAverageGrade() {
   }
 }
 
-// Attach Event Listener to "Go" Button
+// // Attach Event Listener to "Go" Button
 goButton.addEventListener("click", getStudentsAverageGrade);
 
 // Close Dialog
 closeDialogBtn.addEventListener("click", () => {
   averageDialog.close();
-  averageDialog.classList.toggle("remove");
+  averageDialog.classList.toggle("hide");
   
 });

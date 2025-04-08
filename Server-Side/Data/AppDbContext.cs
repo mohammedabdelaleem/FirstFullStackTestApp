@@ -15,13 +15,14 @@ namespace firstRest.Data
 		{
 			base.OnModelCreating(modelBuilder);
 
-			// Seed Data
-			string studentsJson = System.IO.File.ReadAllText("students.json");
-			List<Student> students = JsonSerializer.Deserialize<List<Student>>(studentsJson)!;
-			foreach (Student student in students)
-			{
-				modelBuilder.Entity<Student>().HasData(student);
-			}
+			//// Seed Data : Only At Project Startup
+			
+			//string studentsJson = System.IO.File.ReadAllText("students.json");
+			//List<Student> students = JsonSerializer.Deserialize<List<Student>>(studentsJson)!;
+			//foreach (Student student in students)
+			//{
+			//	modelBuilder.Entity<Student>().HasData(student);
+			//}
 
 		}
 	}

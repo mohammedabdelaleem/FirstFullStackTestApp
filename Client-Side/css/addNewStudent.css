@@ -2,9 +2,18 @@
   box-sizing: border-box;
 }
 
-.flex-h-v{
+
+.form-parent {
+
+position: fixed;
+inset: 0;
 min-height: 100vh;
 min-width: 100vw;
+background-color: #3d3d3bd9;
+}
+
+
+.flex-h-v{
 
   display: flex;
     justify-content: center;
@@ -18,8 +27,12 @@ display: block;
   border: 2px solid #49494952;
   border-radius: 6px;
   width: 40vw;
+  position: relative;
   /* margin: 50px auto; */
 
+}
+form h1 {
+  margin-top: 30px;
 }
 
 /* Add padding to containers */
@@ -93,9 +106,4 @@ a {
 .signin {
   background-color: #f1f1f1;
   text-align: center;
-}
-
-
-.remove {
-  display: none;
 }

@@ -21,6 +21,11 @@ namespace firstRest.Services
 			return context.Students.SingleOrDefault(x => x.Id == id);
 		}
 
+		public bool IsExists(Guid id)
+		{
+			return context.Students.Any(x => x.Id == id);
+		}
+
 		public Guid Add(Student student)
 		{
 			context.Students.Add(student);
@@ -32,6 +37,23 @@ namespace firstRest.Services
 		{
 			context.Students.Remove(student);
 			context.SaveChanges();
+		}
+
+		public Student? Update(Student updatedStudent)
+		{
+			Student? studentDB = context.Students.SingleOrDefault(std=>std.Id  == updatedStudent.Id);
+			
+			if (studentDB != null)
+			{
+				studentDB.Name = updatedStudent.Name;
+				studentDB.Age = updatedStudent.Age;
+				studentDB.Grade = updatedStudent.Grade;
+				context.SaveChanges();
+
+				return studentDB;
+			}
+
+			return null;
 		}
 	}
 }

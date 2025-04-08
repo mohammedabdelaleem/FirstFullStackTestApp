@@ -5,7 +5,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   opacity: 0.7;
 }
 
-.remove {
+.hide {
   display: none;
 }
 

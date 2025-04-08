@@ -11,13 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-  <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/addNewStudent.css">
+<link rel="stylesheet" href="../css/dialog.css">
+<link rel="stylesheet" href="../css/FindStudent.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../style.css">
 
-
-  <script defer src="../js/getAllStudents/getAllStudents_api.js"></script>
-  <script defer src="../js/getAllStudents/getAllStudents_ui.js"></script>
-  <script defer src="../js/getAllStudents/getAllStudents_main.js"></script>
-  <script defer src="../js/deleteStudent.js"></script>
+  <script defer src="../js/CRUD.js"></script>
+  <script defer src="../js/dialogPopup.js"></script>
 
 
   <style>
@@ -27,8 +28,54 @@
   </style>
 </head>
 <body>
-  <h1>Student List</h1>
-  <table>
+
+
+
+  <div class="flex-h-v form-parent hide">
+    <form id="studentForm">
+
+  <i class="icon-x"></i>
+      <h1 style="text-align: center;" id="form-header">Add New Student</h1>
+      <div class="container">
+
+        <input type="hidden" id="id" name="id" ><br><br>
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"  required placeholder="Enter Name"><br><br>
+  
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required  placeholder="Enter Age"><br><br>
+  
+        <label for="grade">Grade:</label><br>
+        <input type="number" id="grade" name="grade" required placeholder="Enter Grade"><br><br>
+  
+        <button class="registerbtn" type="submit">Save</button>
+      </div>
+    </form>
+</div >
+
+<dialog class="hide" id="addedDialog">
+  <div class="dialog-content">
+    <p id="addedValue">Loading...</p>
+    <div class="center">
+      <button id="closeDialogBtn">Close</button>
+    </div>    
+  </div>
+</dialog>
+
+
+  <h1>Student List</h1>             
+  <select id="key" style="font-size: 22px;">
+    <option  selected>All</option>
+    <option  >Passed</option>
+    <option  >Failed</option>
+  </select>
+
+  <div style="margin-bottom: 20px;text-align: left;">
+  <a  class="btn btn-success add"  style="margin-left: 0;">Add New </a>
+
+  </div>
+  <table >
       <thead>
           <tr>
               <th>ID</th>
@@ -40,5 +87,9 @@
       </thead>
       <tbody id="studentsTableBody"></tbody>
   </table>
+
+
+
+
 </body>
 </html>
