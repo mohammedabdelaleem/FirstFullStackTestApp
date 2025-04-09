@@ -2,10 +2,11 @@
 
 This is a simple **ASP.NET Core Web API** for managing student records. It provides endpoints to retrieve student data, including:  
 - **Get all students**  
-- **Get all passed students (Grade ≥ 50)**  
-- **Get all failed students (Grade < 50)**  
+- **Get all passed students**  
+- **Get all failed students**  
 - **Find a student by ID**
 - **Add New student**
+- **Update student**
 -  **Delete student by ID** 
 
 ## 🚀 Endpoints
@@ -14,7 +15,8 @@ This is a simple **ASP.NET Core Web API** for managing student records. It provi
 - `GET /api/students/passed` → Get all students who passed  
 - `GET /api/students/failed` → Get all students who failed  
 - `GET /api/students/{id}` → Find a student by ID  
-- `Post /api/students` → Add New student 
+- `POST /api/students` → Add New student
+- `PUT /api/students/{id}` → Update student 
 - `Delete /api/students/{id}` → Delete student by ID  
 
 
