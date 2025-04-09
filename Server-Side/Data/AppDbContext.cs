@@ -16,6 +16,7 @@ namespace firstRest.Data
 			base.OnModelCreating(modelBuilder);
 
 			//// Seed Data : Only At Project Startup
+			/// Set Default Students 
 			
 			//string studentsJson = System.IO.File.ReadAllText("students.json");
 			//List<Student> students = JsonSerializer.Deserialize<List<Student>>(studentsJson)!;

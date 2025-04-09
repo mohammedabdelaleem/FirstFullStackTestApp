@@ -336,3 +336,4 @@ D:\University\Coding\Web-Development\.Net-Community\Full-Stack\FirstApp\Server-S
 D:\University\Coding\Web-Development\.Net-Community\Full-Stack\FirstApp\Server-Side\obj\Debug\net8.0\firstRest.genruntimeconfig.cache
 D:\University\Coding\Web-Development\.Net-Community\Full-Stack\FirstApp\Server-Side\obj\Debug\net8.0\ref\firstRest.dll
 D:\University\Coding\Web-Development\.Net-Community\Full-Stack\FirstApp\Server-Side\obj\Debug\net8.0\firstRest.sourcelink.json
+D:\University\Coding\Web-Development\.Net-Community\Full-Stack\FirstApp\Server-Side\bin\Debug\net8.0\students.json

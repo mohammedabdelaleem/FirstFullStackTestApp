@@ -16,7 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("constr"));
 });
 
-builder.Services.AddScoped<StudentService, StudentService>();
+builder.Services.AddScoped<IStudentService, StudentService>();
 
 
 

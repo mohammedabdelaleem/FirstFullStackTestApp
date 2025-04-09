@@ -3,7 +3,7 @@ using firstRest.Models;
 
 namespace firstRest.Services
 {
-	public class StudentService
+	public class StudentService : IStudentService
 	{
 		private readonly AppDbContext context;
 

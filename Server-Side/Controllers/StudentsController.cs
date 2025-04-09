@@ -11,9 +11,9 @@ namespace firstRest.Controllers
 	[ApiController]
 	public class StudentsController : ControllerBase
 	{
-		private readonly StudentService studentService;
+		private readonly IStudentService studentService;
 
-		public StudentsController(StudentService studentService)
+		public StudentsController(IStudentService studentService)
 		{
 			this.studentService = studentService;
 		}
